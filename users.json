@@ -1,0 +1,57 @@
+{   domain: "OTC0000000000100000999",
+    projects:
+    [
+	{   projectname: "blockchaindemo",
+	    description: "The blockchain project evaluates opportunities ...
+                          of distributed ledgers in all kinds. It's a project ...
+                          together with external partners form other clouds."
+	    members:
+	    [
+		{ fullname: "Nils Magnus",
+		  username: "nilsmagnus-001",
+		  email:    "nils.magnus@t-systems.com",
+		  phone:    "00491704189377"
+		},
+		{ fullname: "Nils Magnus",
+		  username: "nilsmagnus-002",
+		  email:    "nils.magnus@t-systems.com",
+		  phone:    "00491704189377"
+		},
+		{ fullname: "Nils Magnus",
+		  username: "nilsmagnus-003",
+		  email:    "nils.magnus@t-systems.com",
+		  phone:    "00491704189377"
+		},
+		{ fullname: "Nils Magnus",
+		  username: "nilsmagnus-004",
+		  email:    "nils.magnus@t-systems.com",
+		  phone:    "00491704189377"
+		}
+	    ]
+	},
+	{   projectname: "lexpython",
+	    description: "In the LeX community of the YAM group of the same
+                          name, a number of Python enthusiasts meet to
+                          teach and learn from each other in a self-organized
+                          way over a call or on-prem."
+	    members:
+	    [
+		{ fullname: "Nils Magnus",
+		  username: "nilsmagnus-005",
+		  email:    "nils.magnus@t-systems.com",
+		  phone:    "00491704189377"
+		},
+		{ fullname: "Nils Magnus",
+		  username: "nilsmagnus-006",
+		  email:    "nils.magnus@t-systems.com",
+		  phone:    "00491704189377"
+		}
+	    ]
+	}
+    ]
+}
+
+
+
+
+	
