@@ -1,26 +1,37 @@
+#!/usr/bin/python
+
 import sys
 import json
+import getopt
 import openstack
 
-def main():
-    # parse args, check whether there is either a "-r" or a "-w" option present
+def usage(retval):
+    print("%s [-h|--help] [-r|--read] [-w|--write file.json", argv[0])
+    sys.exit(retval)
 
-    if mode == "reading":
-        existing_users = read_users() # von welcher domain?? --> von der aus OS_CLOUD
-        print(json.dumps(existing_users))
+def main(argv):
+    try:
+        opts, args = getopt.getopt(argv, "hrw:", ["--help", "--read", "--write="])
+    except getopt.GetoptError:
+        usage(1)
         
-    if mode == "writing":
-        if len(sys.argv) > 1:
-            userconfigfile = sys.argv[1]
-        else:
-            userconfigfile = "./users.json"
-        
-        with open(userconfigfile, "r") as f:
-            userconfig = json.load(f)
-        write_userconfig(userconfig)
+    for opt, arg in opts:
+        if opt in ("-h", "--help"):
+            usage(0)
+
+        elif opt in ("-r", "--read"):
+            existing_users = read_users() # von welcher domain?? --> von der aus OS_CLOUD
+            print(json.dumps(existing_users))
+            sys.exit(0)
+            
+        elif opt in ("-w", "--write"):
+            # wenn ich kein Argument zu -w angebe, dann soll eine feste Datei gelesen werden.
+            with open(arg, "r") as f:
+                userconfig = json.load(f)
+            sys.exit(write_userconfig(userconfig))
 
 def read_users():
-    # aufbau der struktur
+    # aufbau der struktur aus der OTC heraus
     # returnen der struktur
         
 def write_users(userconfig):
@@ -51,4 +62,3 @@ def write_users(userconfig):
                     
 if __name__ == "__main__":
     main()
-    
